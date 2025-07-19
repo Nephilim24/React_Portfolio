@@ -1,0 +1,13 @@
+.line__box {
+  width: 100%;
+  .line {
+    margin: 0 auto;
+    width: 700px;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      var(--primary-color) 0%,
+      rgba(0, 168, 205, 0) 100%
+    );
+  }
+}

@@ -1,0 +1,24 @@
+$font-name: "Poppins";
+$font-path: "../fonts/";
+
+$font-weights: (
+  300: "Light",
+  400: "Regular",
+  500: "Medium",
+  600: "SemiBold",
+);
+
+@each $weight, $weight-name in $font-weights {
+  @font-face {
+    font-family: $font-name;
+    src: url("#{$font-path}#{$font-name}-#{$weight-name}.ttf");
+    font-style: normal;
+    font-weight: $weight;
+  }
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf");
+  font-style: normal;
+}
