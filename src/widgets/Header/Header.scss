@@ -2,6 +2,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 4px 0 #00000026;
+  background: rgb(20, 24, 26, 0.8);
+  backdrop-filter: blur(48px);
 }
 
 .active {
