@@ -1,0 +1,18 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  
+  &-link {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      text-shadow: 0 0 5px #3abf00, 0 0 10px #3abf00, 0 0 15px #3abf00,
+        0 0 20px #3abf00;
+      transition: all 0.5s ease-out;
+    }
+  }
+}

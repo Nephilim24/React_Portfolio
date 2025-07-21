@@ -3,9 +3,10 @@ import "./Info.scss";
 import myPhoto from "../../../assets/images/Me.png";
 import infoCircle from "../../../assets/icons/info-circle.svg";
 import infoSmallCircle from "../../../assets/icons/info-small-circle.svg";
-import reactangleInfo from "../../../assets/icons/Rectangle-info.png";
+import infoRectangle from "../../../assets/icons/info-rectangle.png";
 import SocialLinks from "../SocialLinks/SocialLinks.jsx";
 import StackIcons from "../StackIcons/StackIcons.jsx";
+import Button from "../Button/Button.jsx";
 
 const Info = () => {
   return (
@@ -27,27 +28,29 @@ const Info = () => {
             отзывчивый дизайн и захватывающую интерактивность.
           </p>
           <div className="info__actions">
-            <button>Связаться со мной</button>
+            <Button text="Связаться со мной" />
             <SocialLinks />
           </div>
         </div>
 
-        <div className="info__img">
+        <div className="info__portrait">
           <StackIcons />
-          <img className="info__img-circle" src={infoCircle} alt="" />
+          <img className="info__portrait-circle" src={infoCircle} alt="" />
           <img
-            className="info__img-small-circle"
+            className="info__portrait-small-circle"
             src={infoSmallCircle}
             alt=""
           />
-          <div className="info__portrait">
-            <img className="portrait" src={myPhoto} alt="My Photo" />
-            <img className="rectangle" src={reactangleInfo} alt="" />
+          <div className="info__img">
+            <img className="info__portrait" src={myPhoto} alt="My Photo" />
+            <img className="info__rectangle" src={infoRectangle} alt="" />
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+// ! ToDo: сделать анимацию иконок в SocialLInks
 
 export default Info;

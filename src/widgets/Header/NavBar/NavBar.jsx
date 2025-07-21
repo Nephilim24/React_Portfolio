@@ -1,82 +1,11 @@
 import React from "react";
 import "./NavBar.scss";
+import NavBarLInks from "./NavBarLInks";
 
 const NavBar = () => {
   return (
     <nav className="nav container">
-      <a href="#">
-        {/* <svg
-          width="56"
-          height="50"
-          viewBox="0 0 36 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g clipPath="url(#clip0_2337_357)">
-            <path d="M14 0H11V30H14V0Z" fill="white" />
-            <path d="M25 0H22V30H25V0Z" fill="white" />
-            <path d="M12 3.6L14 0L24 26.4L22 30L12 3.6Z" fill="white" />
-            <path d="M14 20.4L16 25.2V30H14V20.4Z" fill="white" />
-            <path d="M22 9.6L20 4.8V0L22 2.09815e-07V9.6Z" fill="white" />
-            <path d="M25 18H27V12H25V18Z" fill="white" />
-            <path d="M11 12H9V18H11V12Z" fill="white" />
-            <path d="M29 26.4H32V25.2H29V26.4Z" fill="white" />
-            <path d="M7 3.60001H4V4.80001H7V3.60001Z" fill="white" />
-            <path d="M29 12L36 12V10.8L29 10.8V12Z" fill="white" />
-            <path d="M7 18H0V19.2H7V18Z" fill="white" />
-            <path d="M29 14.4H34V13.2H29V14.4Z" fill="white" />
-            <path d="M7 15.6H2V16.8H7V15.6Z" fill="white" />
-            <path d="M29 16.8H36V15.6L29 15.6V16.8Z" fill="white" />
-            <path d="M7 13.2H0V14.4H7V13.2Z" fill="white" />
-            <path d="M29 21.6H35V20.4H29V21.6Z" fill="white" />
-            <path d="M7 8.39999H1V9.59999H7V8.39999Z" fill="white" />
-            <path d="M29 4.8L34 4.8V3.6L29 3.6V4.8Z" fill="white" />
-            <path d="M7 25.2H2V26.4H7V25.2Z" fill="white" />
-            <path d="M29 9.60001H34V8.40001H29V9.60001Z" fill="white" />
-            <path d="M7 20.4H2V21.6H7V20.4Z" fill="white" />
-            <path d="M29 19.2H34V18H29V19.2Z" fill="white" />
-            <path d="M7 10.8H2V12H7V10.8Z" fill="white" />
-            <path d="M25 3.60001L27 3.60001V2.40001H25V3.60001Z" fill="white" />
-            <path d="M11 26.4H9V27.6H11V26.4Z" fill="white" />
-            <path d="M25 25.2H27V24H25V25.2Z" fill="white" />
-            <path d="M11 4.8H9V6H11V4.8Z" fill="white" />
-            <path d="M25 6H27V4.8H25V6Z" fill="white" />
-            <path d="M11 24H9V25.2H11V24Z" fill="white" />
-            <path d="M25 27.6H27V26.4H25V27.6Z" fill="white" />
-            <path d="M11 2.39999H9V3.59999H11V2.39999Z" fill="white" />
-            <path d="M25 8.39999H27V7.19999H25V8.39999Z" fill="white" />
-            <path d="M11 21.6H9V22.8H11V21.6Z" fill="white" />
-            <path d="M25 10.8H27V9.6H25V10.8Z" fill="white" />
-            <path d="M11 19.2H9V20.4H11V19.2Z" fill="white" />
-            <path d="M25 20.4H27V19.2H25V20.4Z" fill="white" />
-            <path d="M11 9.60001H9V10.8H11V9.60001Z" fill="white" />
-            <path d="M25 30H27V28.8H25V30Z" fill="white" />
-            <path d="M11 0H9V1.2H11V0Z" fill="white" />
-            <path
-              d="M29 2.39999L31 2.39999V1.19999L29 1.19999V2.39999Z"
-              fill="white"
-            />
-            <path d="M7 27.6H5V28.8H7V27.6Z" fill="white" />
-            <path d="M29 7.2H31V6H29V7.2Z" fill="white" />
-            <path d="M7 22.8H5V24H7V22.8Z" fill="white" />
-            <path d="M29 24H31V22.8H29V24Z" fill="white" />
-            <path d="M7 6H5V7.2H7V6Z" fill="white" />
-            <path d="M29 28.8H34V27.6H29V28.8Z" fill="white" />
-            <path d="M7 1.2H2V2.4H7V1.2Z" fill="white" />
-            <path
-              d="M25 1.2L27 1.2V-2.98023e-06L25 -2.98023e-06V1.2Z"
-              fill="white"
-            />
-            <path d="M11 28.8H9V30H11V28.8Z" fill="white" />
-            <path d="M25 22.8H27V21.6H25V22.8Z" fill="white" />
-            <path d="M11 7.2H9V8.4H11V7.2Z" fill="white" />
-          </g>
-          <defs>
-            <clipPath id="clip0_2337_357">
-              <rect width="36" height="30" fill="white" />
-            </clipPath>
-          </defs>
-        </svg> */}
+      <a className="logo" href="#">
         <svg
           width="45"
           height="45"
@@ -194,28 +123,7 @@ const NavBar = () => {
         </svg>
         <span>Nephilim</span>
       </a>
-      <ul className="nav__list">
-        <li>
-          <a href="#" className="nav__list-link">
-            Обо мне
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__list-link">
-            Проекты
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__list-link">
-            Мой стек
-          </a>
-        </li>
-        <li>
-          <a href="#" className="nav__list-link">
-            Связаться со мной
-          </a>
-        </li>
-      </ul>
+      <NavBarLInks />
     </nav>
   );
 };

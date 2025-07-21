@@ -44,13 +44,13 @@ const SocialIcon = ({ icon, fill }) => {
         width="30"
         height="30"
         viewBox="0 0 30 30"
-        fill="black"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clipPath="url(#clip0_2349_122)">
           <path
             d="M9.3503 1.76492V6.93973L4.30893 12.4975L4.0829 4.43901L4.0702 3.98788H1.5014V1.76492H9.3503Z"
-            stroke="#FF9F05"
+            stroke="white"
             strokeWidth="2"
           />
           <path

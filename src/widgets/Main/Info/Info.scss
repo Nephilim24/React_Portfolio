@@ -26,7 +26,7 @@
     }
     p {
       font-weight: 400;
-      font-size: 14px;
+      font-size: 16px;
       color: #ffffffcc;
       margin-bottom: 20px;
       .html {
@@ -52,95 +52,12 @@
     display: flex;
     align-items: center;
     gap: 26px;
-
-    button {
-      border-radius: 5px;
-      padding: 12.5px 20px;
-      background: var(--primary-color);
-      font-weight: 400;
-      font-size: 15px;
-      color: #fff;
-      cursor: pointer;
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
   }
 
   // .info__img
-  &__img {
+  &__portrait {
     position: relative;
     margin-right: 30px;
-
-    .html__icon-box {
-      .html__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      top: 65%;
-      left: 5%;
-      filter: blur(2px);
-      transform: rotate(12deg);
-      z-index: 6;
-    }
-
-    .css__icon-box {
-      .css__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      top: 40%;
-      left: 85%;
-      transform: rotate(-35deg);
-      z-index: 3;
-      // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
-    }
-
-    .js__icon-box {
-      .js__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      transform: rotate(28deg);
-      top: 1.6%;
-      left: 70%;
-      z-index: 5;
-      // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
-    }
-
-    .figma__icon-box {
-      .figma__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      transform: rotate(-26deg);
-      top: 23%;
-      left: -10%;
-      z-index: 6;
-    }
-
-    .react__icon-box {
-      .react__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      transform: rotate(-13deg);
-      top: 6%;
-      left: 30%;
-    }
-
-    .sass__icon-box {
-      .sass__icon {
-        animation: levitate 2s ease-in-out infinite alternate;
-      }
-      position: absolute;
-      transform: rotate(-25deg);
-      top: 0;
-      left: -12%;
-      z-index: 3;
-    }
 
     &-circle {
       position: absolute;
@@ -159,22 +76,21 @@
   }
 
   // .info__portrait
-  &__portrait {
+  &__img {
     padding-top: 40px;
-    position: relative;
 
-    .portrait {
+    .info__portrait {
       position: relative;
       padding-top: 20px;
       padding-left: 30px;
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 4px 0 #0000004d;
       z-index: 5;
     }
 
-    .rectangle {
+    .info__rectangle {
       position: absolute;
       top: 9%;
-      left: -1.5%;
+      left: 0;
       z-index: 4;
     }
   }

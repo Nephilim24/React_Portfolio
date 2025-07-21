@@ -1,5 +1,6 @@
 import React from "react";
 import SocialIcon from "./SocialIcon.jsx";
+import "./SocialLinks.scss";
 
 const SocialLinks = ({ fill }) => {
   const socialLinks = [
