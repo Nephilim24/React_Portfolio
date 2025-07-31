@@ -1,0 +1,12 @@
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--white);
+  font-family: var(--second-family);
+  
+  span {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+}

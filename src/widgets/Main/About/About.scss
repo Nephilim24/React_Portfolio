@@ -57,20 +57,11 @@
     font-family: var(--second-family);
 
     h2 {
-      font-size: 24px;
-      font-weight: 500;
-      color: #fff;
       margin-bottom: 8px;
-      span {
-        font-weight: 500;
-        font-size: 24px;
-        color: var(--primary-color);
-      }
     }
     p {
-      font-weight: 300;
-      font-size: 16px;
-      color: #ffffffb8;
+      text-align: left;
+      max-width: 430px;
     }
   }
 }

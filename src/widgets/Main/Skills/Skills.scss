@@ -1,0 +1,49 @@
+.skill {
+  // .stack__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & h2 {
+      margin-bottom: 20px;
+    }
+    & p {
+      max-width: 310px;
+      margin-bottom: 36px;
+    }
+  }
+
+  // .stack__technologies
+  &__technologies {
+    padding: 45px 98px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    background: linear-gradient(208deg, #323131 0%, rgba(82, 81, 81, 0) 100%);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  // .stack__img-box
+  &__img-box {
+    max-width: 90px;
+    width: 100%;
+    max-height: 90px;
+    height: 100%;
+    background: linear-gradient(
+      218deg,
+      rgba(0, 168, 205, 0.54) 0%,
+      rgba(0, 168, 205, 0) 82.85%
+    );
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  // .stack__img
+  &__img {
+    position: relative;
+    z-index: 5;
+  }
+}

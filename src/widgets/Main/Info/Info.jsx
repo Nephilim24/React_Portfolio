@@ -51,6 +51,4 @@ const Info = () => {
   );
 };
 
-// ! ToDo: сделать анимацию иконок в SocialLInks
-
 export default Info;

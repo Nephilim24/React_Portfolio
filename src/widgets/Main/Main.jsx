@@ -1,8 +1,9 @@
-import React from "react";
+import "./Main.scss";
 import Info from "./Info/Info.jsx";
 import Line from "../Main/Line/Line.jsx";
-import "./Main.scss";
 import About from "./About/About.jsx";
+import Projects from "./Projects/Projects.jsx";
+import Skills from "./Skills/Skills.jsx";
 
 const Main = () => {
   return (
@@ -10,6 +11,10 @@ const Main = () => {
       <Info />
       <Line />
       <About />
+      <Line />
+      <Projects />
+      <Line />
+      <Skills />
       <Line />
     </main>
   );
