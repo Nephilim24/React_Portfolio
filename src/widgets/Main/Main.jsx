@@ -4,6 +4,7 @@ import Line from "../Main/Line/Line.jsx";
 import About from "./About/About.jsx";
 import Projects from "./Projects/Projects.jsx";
 import Skills from "./Skills/Skills.jsx";
+import Contact from "./Contact/Contact.jsx";
 
 const Main = () => {
   return (
@@ -16,6 +17,7 @@ const Main = () => {
       <Line />
       <Skills />
       <Line />
+      <Contact />
     </main>
   );
 };
