@@ -2,7 +2,6 @@ import "./Contact.scss";
 import Title from "../Title/Title";
 import Descr from "../Descr/Descr";
 import Form from "../Form/Form";
-import Button from "../Button/Button";
 
 const Contact = () => {
   return (
@@ -13,7 +12,6 @@ const Contact = () => {
         </Title>
         <Descr>Чтобы связаться со мной заполните поля ниже.</Descr>
         <Form />
-        <Button text={"Отправить"} type={"submit"} />
       </div>
     </section>
   );
