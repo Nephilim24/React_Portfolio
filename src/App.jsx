@@ -1,11 +1,10 @@
-import { useState } from "react";
-import Header from "./widgets/Header/Header";
+import NavBar from "./widgets/NavBar/NavBar";
 import Main from "./widgets/Main/Main";
 
 function App() {
   return (
     <>
-      <Header />
+      <NavBar />
       <Main />
     </>
   );

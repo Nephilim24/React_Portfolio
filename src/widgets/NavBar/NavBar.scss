@@ -1,0 +1,129 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgb(20, 24, 26, 0.8);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.3s linear;
+
+  & .burger__menu {
+    display: none;
+  }
+
+  &.scrolled {
+    backdrop-filter: blur(48px);
+    box-shadow: 0 4px 4px 0 #00000026;
+    transition: all 0.3s linear;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s linear;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      transition: all 0.5s ease-out;
+      &:hover {
+        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color),
+          0 0 15px var(--primary-color), 0 0 20px var(--primary-color);
+        transition: all 0.5s ease-out;
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes menu {
+  0% {
+    transform-origin: right;
+    width: 100%;
+    opacity: 1;
+  }
+  50% {
+    transform-origin: right;
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    transform-origin: right;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .burger__menu {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      cursor: pointer;
+
+      &.active {
+        & .burger__menu-line {
+          animation: menu 1s ease-in-out;
+          &::before {
+          }
+          &::after {
+          }
+        }
+      }
+
+      &-line {
+        width: 100%;
+        height: 4px;
+        position: relative;
+        margin: 5px 0;
+        border-radius: 3px;
+        background: linear-gradient(
+          220deg,
+          #3abf00 0%,
+          rgba(58, 191, 0, 0) 100%
+        );
+        transition: all 0.5s ease-out;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          background-color: var(--white);
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+          transition: all 0.5s ease-out;
+          background: linear-gradient(
+            220deg,
+            #3abf00 0%,
+            rgba(58, 191, 0, 0) 100%
+          );
+        }
+        &::before {
+          top: -10px;
+        }
+        &::after {
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 320px) {
+}

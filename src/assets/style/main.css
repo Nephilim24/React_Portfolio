@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 a {
@@ -17,20 +18,32 @@ ul {
 }
 
 button,
-input,textarea {
+input,
+textarea {
   border: none;
   outline: none;
 }
 
 body {
+  width: 100%;
   font-family: var(--font-family);
   background-color: var(--black);
   color: var(--white);
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
-  padding: 0 15px;
   margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }

@@ -9,7 +9,7 @@
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.3s; // добавь задержку для background-color
+  transition: background-color 0.3s, color 0.3s, transform 0.1s; // добавь задержку для background-color
 
   button.show {
     padding: 5px 10px;
@@ -18,7 +18,10 @@
   &:hover {
     background-color: var(--primary-color);
     color: var(--black);
-    transition: all 0.3s 0.55s; // задержка для фона
+    transition: background-color 0.3s 0.55s, color 0.3s 0.55s, transform 0.1s linear; // задержка для фона 0.55s
+  }
+  &:active {
+    transform: scale(0.95);
   }
 
   span {
