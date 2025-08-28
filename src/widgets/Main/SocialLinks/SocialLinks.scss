@@ -1,8 +1,8 @@
-ul {
+.info__actions-list {
   display: flex;
   align-items: center;
   gap: 20px;
-  a {
+  & a {
     max-height: 30px;
     display: inline-block;
     width: 100%;
@@ -16,6 +16,7 @@ ul {
       transition: all 0.5s ease-out;
     }
     svg {
+      max-width: 100%;
       transition: all 0.5s ease-out;
     }
   }

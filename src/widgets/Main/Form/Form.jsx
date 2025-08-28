@@ -1,5 +1,5 @@
 import "./Form.scss";
-import Button from "../Button/Button";
+import Button from "../../Reuse/Button/Button";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 

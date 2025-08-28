@@ -11,3 +11,10 @@
     transition: all 0.5s ease-out;
   }
 }
+
+@media (max-width: 576px) {
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+}

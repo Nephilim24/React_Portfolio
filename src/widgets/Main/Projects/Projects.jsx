@@ -1,5 +1,5 @@
-import Title from "../Title/Title.jsx";
-import Descr from "../Descr/Descr.jsx";
+import Title from "../../Reuse/Title/Title.jsx";
+import Descr from "../../Reuse/Descr/Descr.jsx";
 import EmblaCarousel from "../EmblaCarousel/EmblaCarousel.jsx";
 import "./Projects.scss";
 

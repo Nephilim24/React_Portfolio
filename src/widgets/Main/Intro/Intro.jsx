@@ -1,18 +1,17 @@
-import React from "react";
-import "./Info.scss";
+import "./Intro.scss";
 import myPhoto from "../../../assets/images/Me.png";
-import infoCircle from "../../../assets/icons/info-circle.svg";
-import infoSmallCircle from "../../../assets/icons/info-small-circle.svg";
-import infoRectangle from "../../../assets/icons/info-rectangle.png";
+import introCircle from "../../../assets/icons/info-circle.svg";
+import introSmallCircle from "../../../assets/icons/info-small-circle.svg";
+import introRectangle from "../../../assets/icons/info-rectangle.png";
 import SocialLinks from "../SocialLinks/SocialLinks.jsx";
 import StackIcons from "../StackIcons/StackIcons.jsx";
-import Button from "../Button/Button.jsx";
+import Button from "../../Reuse/Button/Button.jsx";
 
-const Info = () => {
+const Intro = () => {
   return (
-    <section className="info">
-      <div className="info__content container">
-        <div className="info__text">
+    <section className="intro">
+      <div className="intro__content container">
+        <div className="intro__text">
           <h1>Привет, меня зовут Мурат</h1>
           <h2>Frontend Developer</h2>
           <p>
@@ -27,23 +26,23 @@ const Info = () => {
             здесь с моими различными проектами, которые включают в себя
             отзывчивый дизайн и захватывающую интерактивность.
           </p>
-          <div className="info__actions">
+          <div className="intro__actions">
             <Button text="Связаться со мной" />
             <SocialLinks />
           </div>
         </div>
 
-        <div className="info__portrait">
+        <div className="intro__portrait">
           <StackIcons />
-          <img className="info__portrait-circle" src={infoCircle} alt="" />
+          <img className="intro__portrait-circle" src={introCircle} alt="" />
           <img
-            className="info__portrait-small-circle"
-            src={infoSmallCircle}
+            className="intro__portrait-small-circle"
+            src={introSmallCircle}
             alt=""
           />
-          <div className="info__img">
-            <img className="info__portrait" src={myPhoto} alt="My Photo" />
-            <img className="info__rectangle" src={infoRectangle} alt="" />
+          <div className="intro__img">
+            <img className="intro__portrait" src={myPhoto} alt="My Photo" />
+            <img className="intro__rectangle" src={introRectangle} alt="" />
           </div>
         </div>
       </div>
@@ -51,4 +50,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default Intro;

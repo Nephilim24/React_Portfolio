@@ -1,32 +1,48 @@
+import { useEffect, useState } from "react";
 import "./NavBar.scss";
 import NavBarLinks from "./NavBarLinks/NavBarLinks.jsx";
 import NavBarLogo from "./NavBarLogo/NavBarLogo.jsx";
 
 const NavBar = () => {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      document.querySelector("header").classList.add("scrolled");
-    } else {
-      document.querySelector("header").classList.remove("scrolled");
-    }
-  });
+  const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Функция очистки для удаления слушателя событий при размонтировании компонента
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="header">
+    <header className={isScrolled ? "scrolled" : ""}>
       <nav className="nav container">
         <a className="logo" href="#">
           <NavBarLogo />
           <span>Nephilim</span>
         </a>
-        <NavBarLinks />
+        <NavBarLinks isMenuToggled={isMenuToggled} />
         <a
           href
-          className="burger__menu"
+          className={isAnimated ? "burger__menu opening" : "burger__menu closing"}
           onClick={() => {
-            document.querySelector(".nav__list").classList.toggle("active");
-            document.querySelector(".burger__menu").classList.toggle("active");
+            setIsAnimated(!isAnimated);
+            if (isMenuToggled) {
+              setIsMenuToggled(!isMenuToggled);
+            } else {
+              setTimeout(() => setIsMenuToggled(!isMenuToggled), 710);
+            }
           }}
         >
+          <span className="burger__menu-line"></span>
+          <span className="burger__menu-line"></span>
           <span className="burger__menu-line"></span>
         </a>
       </nav>

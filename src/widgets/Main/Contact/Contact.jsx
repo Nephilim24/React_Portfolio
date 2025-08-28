@@ -1,6 +1,6 @@
 import "./Contact.scss";
-import Title from "../Title/Title";
-import Descr from "../Descr/Descr";
+import Title from "../../Reuse/Title/Title";
+import Descr from "../../Reuse/Descr/Descr";
 import Form from "../Form/Form";
 
 const Contact = () => {

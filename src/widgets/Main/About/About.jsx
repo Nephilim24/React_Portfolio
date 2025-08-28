@@ -5,8 +5,8 @@ import aboutCircle from "../../../assets/icons/about-circle.svg";
 import aboutSmallCircle from "../../../assets/icons/about-small-circle.svg";
 import aboutRectangle from "../../../assets/icons/about-rectangle.png";
 import aboutRectangleGreen from "../../../assets/icons/about-rectangle-green.png";
-import Title from "../Title/Title";
-import Descr from "../Descr/Descr.jsx";
+import Title from "../../Reuse/Title/Title";
+import Descr from "../../Reuse/Descr/Descr.jsx";
 
 const About = () => {
   return (

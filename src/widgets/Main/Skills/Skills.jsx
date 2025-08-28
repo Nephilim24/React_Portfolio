@@ -1,6 +1,6 @@
 import "./Skills.scss";
-import Title from "../Title/Title.jsx";
-import Descr from "../Descr/Descr.jsx";
+import Title from "../../Reuse/Title/Title.jsx";
+import Descr from "../../Reuse/Descr/Descr.jsx";
 import html from "../../../assets/images/html.png";
 import css from "../../../assets/images/css.png";
 import js from "../../../assets/images/js.png";

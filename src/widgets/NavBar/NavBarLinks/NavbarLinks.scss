@@ -31,7 +31,7 @@
       transform-origin: top;
       transition: all 0.3s linear;
 
-      &.active {
+      &.toggled {
         transform: scaleY(1);
         transition: all 0.3s linear;
         box-shadow: -6px 8px 4px 0 rgba(0, 0, 0, 0.1490196078);

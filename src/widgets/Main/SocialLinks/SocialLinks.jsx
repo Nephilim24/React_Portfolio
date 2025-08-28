@@ -1,6 +1,5 @@
-import React from "react";
-import SocialIcon from "./SocialIcon.jsx";
 import "./SocialLinks.scss";
+import SocialIcon from "./SocialIcon.jsx";
 
 const SocialLinks = ({ fill }) => {
   const socialLinks = [
@@ -9,7 +8,7 @@ const SocialLinks = ({ fill }) => {
     { icon: "kwork", url: "https://kwork.ru/user/nephilim976" },
   ];
   return (
-    <ul>
+    <ul className="info__actions-list">
       {socialLinks.map((link, index) => (
         <li key={index}>
           <a href={link.url} target="_blank">

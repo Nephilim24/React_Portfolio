@@ -1,6 +1,6 @@
 import "./NavbarLinks.scss";
 
-const NavBarLInks = () => {
+const NavBarLInks = ({ menuToggled }) => {
   const links = [
     { text: "Обо мне", href: "#about" },
     { text: "Проекты", href: "#projects" },
@@ -9,7 +9,7 @@ const NavBarLInks = () => {
   ];
 
   return (
-    <ul className="nav__list">
+    <ul className={menuToggled ? "nav__list toggled" : "nav__list"}>
       {links.map((link, index) => (
         <li key={index}>
           <a className="nav__list-link" href={link.href}>
