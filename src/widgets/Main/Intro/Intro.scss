@@ -54,10 +54,10 @@
     gap: 26px;
   }
 
-  // .intro__img
-  &__portrait {
+  // .intro__visual
+  &__visual {
     position: relative;
-    margin-right: 30px;
+    padding-top: 40px;
 
     &-circle {
       position: absolute;
@@ -71,25 +71,25 @@
       display: block;
       transform: rotate(22deg);
       top: 50%;
-      left: 20%;
+      left: 25%;
     }
   }
 
   // .intro__portrait
-  &__img {
-    padding-top: 40px;
-
-    .intro__portrait {
+  &__portrait {
+    position: relative;
+    &-img {
       position: relative;
+      width: 100%;
       padding-top: 20px;
       padding-left: 30px;
       box-shadow: 0 4px 4px 0 #0000004d;
       z-index: 5;
     }
-
-    .intro__rectangle {
+    &-rectangle {
       position: absolute;
-      top: 9%;
+      width: 100%;
+      top: 0;
       left: 0;
       z-index: 4;
     }
@@ -105,12 +105,97 @@
   }
 }
 
-@media (max-width: 1200px) {
-}
 @media (max-width: 998px) {
+  .intro {
+    // .intro__text
+    &__text {
+      & h1 {
+        font-size: 32px;
+      }
+      & h2 {
+        font-size: 20px;
+      }
+      & p {
+        max-width: 400px;
+        font-size: 14px;
+      }
+    }
+
+    // .intro__actions
+    &__actions {
+      & button {
+        font-size: 13px;
+      }
+    }
+
+    // .intro__portrait
+    &__portrait-img {
+      width: 250px;
+    }
+
+    // .intro__rectangle
+    &__rectangle {
+      width: 250px;
+    }
+
+    // .intro__portrait-circle
+    &__portrait-circle {
+      transform: scale(0.9) rotate(-70deg);
+    }
+
+    // .intro__portrait-small-circle
+    &__portrait-small-circle {
+      transform: scale(0.9) rotate(22deg);
+    }
+  }
 }
 @media (max-width: 768px) {
+  .intro {
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 50px;
+    }
+    // .intro__text
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+    }
+
+    // .intro__portrait
+    &__portrait {
+      margin: 0;
+    }
+    // .intro__portrait
+    &__portrait-img {
+      width: 100%;
+    }
+
+
+    // .intro__img
+    &__img {
+    }
+
+    // .intro__rectangle
+    &__rectangle {
+    }
+
+    // .intro__portrait-circle
+    &__portrait-circle {
+      display: none;
+    }
+
+    // .intro__portrait-small-circle
+    &__portrait-small-circle {
+      display: none;
+    }
+  }
 }
+
 @media (max-width: 576px) {
 }
 @media (max-width: 320px) {

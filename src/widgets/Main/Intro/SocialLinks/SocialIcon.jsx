@@ -1,5 +1,3 @@
-import React from "react";
-
 const SocialIcon = ({ icon, fill }) => {
   if (icon === "telegram") {
     return (

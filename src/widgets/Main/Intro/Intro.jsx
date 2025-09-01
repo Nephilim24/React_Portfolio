@@ -3,8 +3,8 @@ import myPhoto from "../../../assets/images/Me.png";
 import introCircle from "../../../assets/icons/info-circle.svg";
 import introSmallCircle from "../../../assets/icons/info-small-circle.svg";
 import introRectangle from "../../../assets/icons/info-rectangle.png";
-import SocialLinks from "../SocialLinks/SocialLinks.jsx";
-import StackIcons from "../StackIcons/StackIcons.jsx";
+import SocialLinks from "./SocialLinks/SocialLinks.jsx";
+import StackIcons from "./StackIcons/StackIcons.jsx";
 import Button from "../../Reuse/Button/Button.jsx";
 
 const Intro = () => {
@@ -32,18 +32,22 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="intro__portrait">
-          <StackIcons />
-          <img className="intro__portrait-circle" src={introCircle} alt="" />
+        <div className="intro__visual">
+          <div className="intro__portrait">
+            <img className="intro__portrait-img" src={myPhoto} alt="My Photo" />
+            <img
+              className="intro__portrait-rectangle"
+              src={introRectangle}
+              alt=""
+            />
+          </div>
+          <img className="intro__visual-circle" src={introCircle} alt="" />
           <img
-            className="intro__portrait-small-circle"
+            className="intro__visual-small-circle"
             src={introSmallCircle}
             alt=""
           />
-          <div className="intro__img">
-            <img className="intro__portrait" src={myPhoto} alt="My Photo" />
-            <img className="intro__rectangle" src={introRectangle} alt="" />
-          </div>
+          <StackIcons />
         </div>
       </div>
     </section>

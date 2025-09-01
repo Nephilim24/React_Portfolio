@@ -1,6 +1,6 @@
 import "./NavbarLinks.scss";
 
-const NavBarLInks = ({ menuToggled }) => {
+const NavBarLInks = ({ isMenuToggled }) => {
   const links = [
     { text: "Обо мне", href: "#about" },
     { text: "Проекты", href: "#projects" },
@@ -9,7 +9,7 @@ const NavBarLInks = ({ menuToggled }) => {
   ];
 
   return (
-    <ul className={menuToggled ? "nav__list toggled" : "nav__list"}>
+    <ul className={isMenuToggled ? "nav__list toggled" : "nav__list"}>
       {links.map((link, index) => (
         <li key={index}>
           <a className="nav__list-link" href={link.href}>

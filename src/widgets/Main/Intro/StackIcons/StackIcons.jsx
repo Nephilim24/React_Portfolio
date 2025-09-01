@@ -1,9 +1,9 @@
-import html from "../../../assets/images/html.png";
-import css from "../../../assets/images/css.png";
-import js from "../../../assets/images/js.png";
-import figma from "../../../assets/images/figma.png";
-import react from "../../../assets/images/react.png";
-import sass from "../../../assets/images/sass.png";
+import html from "../../../../assets/images/html.png";
+import css from "../../../../assets/images/css.png";
+import js from "../../../../assets/images/js.png";
+import figma from "../../../../assets/images/figma.png";
+import react from "../../../../assets/images/react.png";
+import sass from "../../../../assets/images/sass.png";
 import "./StackIcons.scss";
 
 const StackIcons = () => {

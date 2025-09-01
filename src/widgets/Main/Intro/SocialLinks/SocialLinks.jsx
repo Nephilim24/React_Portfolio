@@ -8,7 +8,7 @@ const SocialLinks = ({ fill }) => {
     { icon: "kwork", url: "https://kwork.ru/user/nephilim976" },
   ];
   return (
-    <ul className="info__actions-list">
+    <ul className="intro__actions-list">
       {socialLinks.map((link, index) => (
         <li key={index}>
           <a href={link.url} target="_blank">

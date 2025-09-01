@@ -1,0 +1,137 @@
+.html__icon-box {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  filter: blur(2px);
+  transform: rotate(12deg);
+  z-index: 6;
+
+  .html__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+}
+
+.css__icon-box {
+  position: absolute;
+  top: 40%;
+  left: 85%;
+  transform: rotate(-35deg);
+  z-index: 3;
+
+  .css__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+  // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.js__icon-box {
+  position: absolute;
+  transform: rotate(28deg);
+  top: 1.6%;
+  left: 70%;
+  z-index: 5;
+
+  .js__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+  // box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.figma__icon-box {
+  position: absolute;
+  transform: rotate(-26deg);
+  top: 23%;
+  left: -10%;
+  z-index: 6;
+
+  .figma__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+}
+
+.react__icon-box {
+  position: absolute;
+  transform: rotate(-13deg);
+  top: 6%;
+  left: 30%;
+
+  .react__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+}
+.sass__icon-box {
+  position: absolute;
+  transform: rotate(-25deg);
+  top: 0;
+  left: -12%;
+  z-index: 3;
+
+  .sass__icon {
+    animation: levitate 2s ease-in-out infinite alternate;
+  }
+}
+
+@media (max-width: 998px) {
+  .html__icon-box {
+    .html__icon {
+      width: 80%;
+    }
+  }
+  .css__icon-box {
+    .css__icon {
+      width: 50px;
+    }
+  }
+  .js__icon-box {
+    .js__icon {
+      width: 80%;
+    }
+  }
+  .figma__icon-box {
+    .figma__icon {
+      width: 80%;
+    }
+  }
+  .react__icon-box {
+    .react__icon {
+      width: 80%;
+    }
+  }
+  .sass__icon-box {
+    .sass__icon {
+      width: 80%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .html__icon-box {
+    .html__icon {
+      width: 100%;
+    }
+  }
+  .css__icon-box {
+    .css__icon {
+      width: 62px;
+    }
+  }
+  .js__icon-box {
+    .js__icon {
+      width: 100%;
+    }
+  }
+  .figma__icon-box {
+    .figma__icon {
+      width: 100%;
+    }
+  }
+  .react__icon-box {
+    .react__icon {
+      width: 100%;
+    }
+  }
+  .sass__icon-box {
+    .sass__icon {
+      width: 100%;
+    }
+  }
+}

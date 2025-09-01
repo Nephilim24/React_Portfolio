@@ -1,4 +1,4 @@
-.info__actions-list {
+.intro__actions-list {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -16,8 +16,21 @@
       transition: all 0.5s ease-out;
     }
     svg {
-      max-width: 100%;
       transition: all 0.5s ease-out;
+    }
+  }
+}
+
+@media (max-width:998px) {
+  .intro__actions-list {
+    gap: 15px;
+    & li {
+      & a {
+        & svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
     }
   }
 }

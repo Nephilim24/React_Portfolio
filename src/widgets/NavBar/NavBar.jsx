@@ -4,9 +4,9 @@ import NavBarLinks from "./NavBarLinks/NavBarLinks.jsx";
 import NavBarLogo from "./NavBarLogo/NavBarLogo.jsx";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
