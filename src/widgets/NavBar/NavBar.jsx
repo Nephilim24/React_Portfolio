@@ -31,7 +31,9 @@ const NavBar = () => {
         <NavBarLinks isMenuToggled={isMenuToggled} />
         <a
           href
-          className={isAnimated ? "burger__menu opening" : "burger__menu closing"}
+          className={
+            isAnimated ? "burger__menu opening" : "burger__menu closing"
+          }
           onClick={() => {
             setIsAnimated(!isAnimated);
             if (isMenuToggled) {

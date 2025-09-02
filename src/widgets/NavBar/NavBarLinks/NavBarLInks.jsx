@@ -1,6 +1,6 @@
-import "./NavbarLinks.scss";
+import "./NavBarLinks.scss";
 
-const NavBarLInks = ({ isMenuToggled }) => {
+const NavBarLinks = ({ isMenuToggled }) => {
   const links = [
     { text: "Обо мне", href: "#about" },
     { text: "Проекты", href: "#projects" },
@@ -21,4 +21,4 @@ const NavBarLInks = ({ isMenuToggled }) => {
   );
 };
 
-export default NavBarLInks;
+export default NavBarLinks;
