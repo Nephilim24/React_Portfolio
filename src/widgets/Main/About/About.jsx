@@ -12,19 +12,19 @@ const About = () => {
   return (
     <section className="about">
       <div className="about__content container">
-        <div className="about__portrait">
-          <div className="about__portrait-img">
-            <img className="about__portrait" src={myPhoto2} alt="" />
-            <img className="about__rectangle" src={aboutRectangle} alt="" />
+        <div className="about__visual">
+          <div className="about__visual-images">
+            <img className="about__visual-portrait" src={myPhoto2} alt="" />
+            {/* <img className="about__visual-rectangle" src={aboutRectangle} alt="" /> */}
             <img
-              className="about__rectangle-green"
+              className="about__visual-rectangle-green"
               src={aboutRectangleGreen}
               alt=""
             />
           </div>
-          <img className="about__portrait-circle" src={aboutCircle} alt="" />
+          <img className="about__visual-circle" src={aboutCircle} alt="" />
           <img
-            className="about__portrait-small-circle"
+            className="about__visual-small-circle"
             src={aboutSmallCircle}
             alt=""
           />

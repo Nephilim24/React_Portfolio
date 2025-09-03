@@ -7,28 +7,31 @@
     align-items: center;
     justify-content: space-between;
   }
-  // .about__portrait
-  &__portrait {
+  // .about__visual
+  &__visual {
     position: relative;
     margin-right: 30px;
 
-    // .about__portrait-img
-    &-img {
+    // .about__visual-images
+    &-images {
       position: relative;
+      max-width: 267px;
+      background: url("../../../assets/icons/about-rectangle.png") no-repeat
+        center / cover;
+      padding: 15px 90px 0 20px;
     }
-    .about__portrait {
+    &-portrait {
       position: relative;
-      padding: 15px 0 0 20px;
       z-index: 5;
       // box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, 0.4);
     }
-    .about__rectangle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 4;
-    }
-    .about__rectangle-green {
+    // &-rectangle {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 4;
+    // }
+    &-rectangle-green {
       position: absolute;
       top: 0;
       left: 0;
@@ -36,15 +39,15 @@
       transform: rotate(8deg);
     }
 
-    .about__portrait-circle {
+    &-circle {
       position: absolute;
       top: -30%;
-      left: 60%;
-      transform: rotate(-48deg);
+      left: 40%;
+      transform: rotate(-100deg);
     }
-    .about__portrait-small-circle {
+    &-small-circle {
       position: absolute;
-      top: 60%;
+      top: 53%;
       left: -5%;
       transform: rotate(176deg);
     }
@@ -53,7 +56,7 @@
   // .about__text
   &__text {
     width: 100%;
-    max-width: 465px;
+    max-width: 540px;
     font-family: var(--second-family);
 
     h2 {
@@ -61,7 +64,72 @@
     }
     p {
       text-align: left;
-      max-width: 430px;
+      // max-width: 430px;
     }
   }
 }
+
+@media (max-width: 998px) {
+  .about {
+    // .about__visual
+    &__visual {
+      А
+      // .about__visual-portrait
+      &-portrait {
+        height: 225px;
+      }
+      // .about__visual-rectangle
+      &-rectangle {
+        transform: scale(0.9);
+      }
+      // .about__visual-rectangle-green
+      &-rectangle-green {
+        transform: scale(0.9) rotate(8deg);
+      }
+      // .about__visual-circle
+      &-circle {
+        transform: rotate(-100deg) scale(0.9);
+      }
+      // .about__visual-small-circle
+      &-small-circle {
+        transform: rotate(176deg) scale(0.9);
+      }
+    }
+
+    // .about__text
+    &__text {
+      max-width: 350px;
+      & h2,
+      & span {
+        font-size: 20px;
+      }
+      // & p {
+      //   font-size: 12px;
+      // }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    // .about__content
+    &__content {
+      flex-direction: column;
+      gap: 50px;
+      text-align: center;
+    }
+
+    // .about__visual
+    &__visual {
+      margin: 0;
+    }
+
+    // .about__text
+    &__text {
+      & p {
+        text-align: center;
+      }
+    }
+  }
+}
+

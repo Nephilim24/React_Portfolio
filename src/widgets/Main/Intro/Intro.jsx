@@ -35,11 +35,11 @@ const Intro = () => {
         <div className="intro__visual">
           <div className="intro__portrait">
             <img className="intro__portrait-img" src={myPhoto} alt="My Photo" />
-            <img
+            {/* <img
               className="intro__portrait-rectangle"
               src={introRectangle}
               alt=""
-            />
+            /> */}
           </div>
           <img className="intro__visual-circle" src={introCircle} alt="" />
           <img

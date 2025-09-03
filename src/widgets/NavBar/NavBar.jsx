@@ -30,7 +30,7 @@ const NavBar = () => {
         </a>
         <NavBarLinks isMenuToggled={isMenuToggled} />
         <a
-          href
+          href='#'
           className={
             isAnimated ? "burger__menu opening" : "burger__menu closing"
           }

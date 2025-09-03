@@ -1,7 +1,7 @@
 import Title from "../../Reuse/Title/Title.jsx";
 import Descr from "../../Reuse/Descr/Descr.jsx";
-import EmblaCarousel from "../EmblaCarousel/EmblaCarousel.jsx";
 import "./Projects.scss";
+import Swiper from "../SwiperCarousel/SwiperCarousel.jsx";
 
 const Projects = () => {
   return (
@@ -15,7 +15,7 @@ const Projects = () => {
           них демонстрирует мои навыки и подход к разработке. Вы можете
           ознакомиться с ними ниже.
         </Descr>
-        <EmblaCarousel />
+        <Swiper />
       </div>
     </section>
   );

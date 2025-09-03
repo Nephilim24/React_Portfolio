@@ -11,7 +11,7 @@
   // .intro__text
   &__text {
     width: 100%;
-    max-width: 485px;
+    max-width: 510px;
     margin-right: 15px;
     h1 {
       font-weight: 500;
@@ -78,6 +78,8 @@
   // .intro__portrait
   &__portrait {
     position: relative;
+    background: url("../../../assets/icons/info-rectangle.png") no-repeat center /
+      cover;
     &-img {
       position: relative;
       width: 100%;
@@ -86,13 +88,13 @@
       box-shadow: 0 4px 4px 0 #0000004d;
       z-index: 5;
     }
-    &-rectangle {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 4;
-    }
+    // &-rectangle {
+    //   position: absolute;
+    //   width: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 4;
+    // }
   }
 }
 
@@ -116,7 +118,7 @@
         font-size: 20px;
       }
       & p {
-        max-width: 400px;
+        // max-width: 400px;
         font-size: 14px;
       }
     }
@@ -133,10 +135,10 @@
       width: 250px;
     }
 
-    // .intro__rectangle
-    &__rectangle {
-      width: 250px;
-    }
+    // // .intro__rectangle
+    // &__rectangle {
+    //   width: 250px;
+    // }
 
     // .intro__portrait-circle
     &__portrait-circle {
@@ -175,7 +177,6 @@
       width: 100%;
     }
 
-
     // // .intro__img
     // &__img {
     // }
@@ -194,9 +195,4 @@
       display: none;
     }
   }
-}
-
-@media (max-width: 576px) {
-}
-@media (max-width: 320px) {
 }
