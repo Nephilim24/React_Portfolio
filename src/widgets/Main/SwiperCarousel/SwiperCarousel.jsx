@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/scss";
 import "./SwiperCarousel.scss";
 import Auto from "../../../assets/images/Auto.png";
@@ -71,6 +71,11 @@ const SwiperCarousel = () => {
         modules={[Navigation]}
         onSwiper={setSwiper}
         speed={650}
+        breakpoints={{
+          0: { slidesPerView: 1, spaceBetween: 0 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          998: { slidesPerView: 3, spaceBetween: 40 },
+        }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
