@@ -19,7 +19,8 @@
   &:hover {
     background-color: var(--primary-color);
     color: var(--black);
-    transition: background-color 0.3s 0.55s, color 0.3s 0.55s, transform 0.1s linear; // задержка для фона 0.55s
+    transition: background-color 0.3s 0.55s, color 0.3s 0.55s,
+      transform 0.1s linear; // задержка для фона 0.55s
   }
   &:active {
     transform: scale(0.95);
@@ -92,5 +93,11 @@
     opacity: 1;
     transition: height 0.2s 0.2s ease-in, width 0.2s 0.4s linear,
       opacity 0s 0.2s;
+  }
+}
+
+@media (max-width: 998px) {
+  .button {
+    font-size: 13px;
   }
 }

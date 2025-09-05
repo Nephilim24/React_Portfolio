@@ -1,13 +1,4 @@
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(20, 24, 26, 0.8);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  transition: all 0.3s linear;
-
   & .burger__menu {
     display: none;
     overflow: hidden;
@@ -24,6 +15,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px;
     transition: all 0.3s linear;
 
     .logo {

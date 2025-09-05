@@ -8,6 +8,7 @@ form {
     rgba(217, 217, 217, 0.13) 0%,
     rgba(217, 217, 217, 0) 100%
   );
+  border-radius: 20px;
   padding: 20px;
   width: 100%;
   height: 100%;
@@ -70,4 +71,16 @@ form {
 .form__actions {
   display: flex;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  form {
+    grid-template: repeat(1, 1fr) / repeat(1, 1fr);
+    & input {
+      margin-bottom: 20px;
+    }
+    & input:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
 }

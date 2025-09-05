@@ -5,6 +5,7 @@ header {
   box-shadow: 0 4px 4px 0 #00000026;
   background: rgb(20, 24, 26, 0.8);
   backdrop-filter: blur(48px);
+  transition: all 0.3s linear;
 }
 
 .active {

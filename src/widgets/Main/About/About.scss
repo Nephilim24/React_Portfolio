@@ -73,7 +73,6 @@
   .about {
     // .about__visual
     &__visual {
-      А
       // .about__visual-portrait
       &-portrait {
         height: 225px;
@@ -99,10 +98,6 @@
     // .about__text
     &__text {
       max-width: 350px;
-      & h2,
-      & span {
-        font-size: 20px;
-      }
       // & p {
       //   font-size: 12px;
       // }
@@ -132,4 +127,3 @@
     }
   }
 }
-
