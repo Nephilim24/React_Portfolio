@@ -1,10 +1,14 @@
 header {
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 85px;
   z-index: 1000;
   background: rgb(20, 24, 26, 0.8);
   backdrop-filter: blur(48px);
+  box-sizing: border-box;
+  overflow-x: hidden;
   transition: all 0.3s linear;
 
   &.scrolled {
