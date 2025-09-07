@@ -1,6 +1,7 @@
 .nav__list {
   display: flex;
   align-items: center;
+  z-index: 100;
   gap: 30px;
 
   &-link {

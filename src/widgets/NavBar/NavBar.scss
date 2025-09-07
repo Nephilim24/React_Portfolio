@@ -1,39 +1,31 @@
-header {
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  transition: all 0.3s linear;
+  position: relative;
+
   & .burger__menu {
     display: none;
     overflow: hidden;
   }
 
-  &.scrolled {
-    backdrop-filter: blur(48px);
-    box-shadow: 0 4px 4px 0 #00000026;
-    transition: all 0.3s linear;
-  }
-
-  .nav {
-    width: 100%;
+  .logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    transition: all 0.3s linear;
-    position: relative;
-
-    .logo {
-      display: flex;
-      align-items: center;
+    transition: all 0.5s ease-out;
+    &:hover {
+      text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color),
+        0 0 15px var(--primary-color), 0 0 20px var(--primary-color);
       transition: all 0.5s ease-out;
-      &:hover {
-        text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color),
-          0 0 15px var(--primary-color), 0 0 20px var(--primary-color);
-        transition: all 0.5s ease-out;
-      }
+    }
 
-      span {
-        font-weight: 600;
-        font-size: 24px;
-        color: #fff;
-      }
+    span {
+      font-weight: 600;
+      font-size: 24px;
+      color: #fff;
     }
   }
 }
@@ -105,56 +97,51 @@ header {
 }
 
 @media (max-width: 768px) {
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    nav {
-      & .burger__menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        margin-left: auto;
-        gap: 5px;
+  .nav {
+    & .burger__menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      margin-left: auto;
+      gap: 5px;
+      width: 100%;
+      max-width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      &-line {
         width: 100%;
-        max-width: 30px;
-        height: 30px;
-        cursor: pointer;
+        height: 4px;
+        border-radius: 3px;
+        background: linear-gradient(
+          220deg,
+          var(--primary-color) 0%,
+          var(--black) 100%
+        );
+      }
 
-        &-line {
-          width: 100%;
-          height: 4px;
-          border-radius: 3px;
-          background: linear-gradient(
-            220deg,
-            var(--primary-color) 0%,
-            var(--black) 100%
-          );
+      &.opening {
+        .burger__menu-line:nth-of-type(1) {
+          animation: appear 0.85s 0.2s both;
         }
-
-        &.opening {
-          .burger__menu-line:nth-of-type(1) {
-            animation: appear 0.85s 0.2s both;
-          }
-          .burger__menu-line:nth-of-type(2) {
-            animation: appear 0.85s 0.1s both;
-          }
-          .burger__menu-line:nth-of-type(3) {
-            animation: appear-half-width 0.85s forwards;
-          }
+        .burger__menu-line:nth-of-type(2) {
+          animation: appear 0.85s 0.1s both;
         }
+        .burger__menu-line:nth-of-type(3) {
+          animation: appear-half-width 0.85s forwards;
+        }
+      }
 
-        &.closing {
-          .burger__menu-line:nth-of-type(1) {
-            animation: disappear 0.85s 0.2s both;
-          }
-          .burger__menu-line:nth-of-type(2) {
-            animation: disappear 0.85s 0.1s both;
-          }
-          .burger__menu-line:nth-of-type(3) {
-            animation: disappear-half-width 0.85s both;
-          }
+      &.closing {
+        .burger__menu-line:nth-of-type(1) {
+          animation: disappear 0.85s 0.2s both;
+        }
+        .burger__menu-line:nth-of-type(2) {
+          animation: disappear 0.85s 0.1s both;
+        }
+        .burger__menu-line:nth-of-type(3) {
+          animation: disappear-half-width 0.85s both;
         }
       }
     }
