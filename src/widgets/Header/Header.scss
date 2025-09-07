@@ -1,11 +1,12 @@
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background: rgb(20, 24, 26, 0.8);
   backdrop-filter: blur(48px);
   transition: all 0.3s linear;
-  
+
   &.scrolled {
     backdrop-filter: blur(48px);
     box-shadow: 0 4px 4px 0 #00000026;

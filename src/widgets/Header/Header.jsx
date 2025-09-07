@@ -2,11 +2,7 @@ import NavBar from "../NavBar/NavBar";
 import "./Header.scss";
 
 const Header = () => {
-  return (
-    <header>
-      <NavBar />
-    </header>
-  );
+  return <NavBar />;
 };
 
 export default Header;
