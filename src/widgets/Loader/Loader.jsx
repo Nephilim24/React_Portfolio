@@ -3,10 +3,14 @@ import "./Loader.scss";
 
 const Loader = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isFadeOut, setIsFadeOut] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
-      setIsLoading(false); // Загрузка завершена
+      setIsFadeOut(true); // Начинаем анимацию затухания
+      setTimeout(() => {
+        setIsLoading(false); // Загрузка завершена
+      }, 1000);
     };
 
     // 3. Используем событие 'load' на window. Оно ждет загрузки всех ресурсов
@@ -21,7 +25,11 @@ const Loader = () => {
 
   return (
     // 5. Упрощаем логику классов. Класс 'active' добавляется, пока isLoading === true.
-    <div className={`loader__wrapper ${isLoading ? "active" : ""}`}>
+    <div
+      className={`loader__wrapper ${isLoading ? "active" : ""} ${
+        isFadeOut ? "fade-out" : ""
+      }`}
+    >
       <div className="loader"></div>
     </div>
   );

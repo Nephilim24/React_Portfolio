@@ -18,7 +18,7 @@ const StackIcons = () => {
   return (
     <>
       {stackItems.map((item, index) => (
-        <div className={`${item.name}__icon-box`} key={index}>
+        <div className={`${item.name}__icon-box`} key={index} style={{willChange: 'transform'}}>
           <img
             className={`${item.name}__icon`}
             src={item.path}

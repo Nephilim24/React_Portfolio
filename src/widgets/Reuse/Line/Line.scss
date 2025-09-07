@@ -3,12 +3,22 @@
   width: 100%;
   .line {
     margin: 0 auto;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     height: 2px;
     background: linear-gradient(
       90deg,
       var(--primary-color) 0%,
       rgba(0, 168, 205, 0) 100%
     );
+  }
+}
+
+@media (max-width: 768px) {
+  .line__box {
+    padding: 20px 0;
+    .line {
+      max-width: 80%;
+    }
   }
 }

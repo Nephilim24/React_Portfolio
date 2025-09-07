@@ -33,7 +33,7 @@
 
       &.toggled {
         transform: scaleY(1);
-        transition: all 0.3s linear;
+        transition: all 0.3s 0.55s linear;
         box-shadow: -6px 8px 4px 0 rgba(0, 0, 0, 0.1490196078);
       }
     }

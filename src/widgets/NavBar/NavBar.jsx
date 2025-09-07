@@ -30,17 +30,13 @@ const NavBar = () => {
         </a>
         <NavBarLinks isMenuToggled={isMenuToggled} />
         <a
-          href='#'
+          href="#"
           className={
             isAnimated ? "burger__menu opening" : "burger__menu closing"
           }
           onClick={() => {
             setIsAnimated(!isAnimated);
-            if (isMenuToggled) {
-              setIsMenuToggled(!isMenuToggled);
-            } else {
-              setTimeout(() => setIsMenuToggled(!isMenuToggled), 710);
-            }
+            setIsMenuToggled(!isMenuToggled);
           }}
         >
           <span className="burger__menu-line"></span>
