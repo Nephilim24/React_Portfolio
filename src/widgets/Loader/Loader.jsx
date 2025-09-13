@@ -7,24 +7,31 @@ const Loader = () => {
 
   useEffect(() => {
     const handleLoad = () => {
-      setIsFadeOut(true); // Начинаем анимацию затухания
       setTimeout(() => {
-        setIsLoading(false); // Загрузка завершена
+        setIsFadeOut(true);
+        setIsLoading(false);
       }, 1000);
     };
 
-    // 3. Используем событие 'load' на window. Оно ждет загрузки всех ресурсов
-    //    (картинок, стилей), что лучше подходит для лоадера.
     window.addEventListener("load", handleLoad);
 
-    // 4. Возвращаем функцию очистки, которая удаляет ТОТ ЖЕ самый обработчик.
+    // Блокируем скролл body, пока идет загрузка
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
+    }
+
     return () => {
       window.removeEventListener("load", handleLoad);
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     };
-  }, []); // Пустой массив зависимостей гарантирует, что эффект выполнится только один раз
+  }, [isLoading]);
 
   return (
-    // 5. Упрощаем логику классов. Класс 'active' добавляется, пока isLoading === true.
     <div
       className={`loader__wrapper ${isLoading ? "active" : ""} ${
         isFadeOut ? "fade-out" : ""
