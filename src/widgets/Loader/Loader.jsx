@@ -33,8 +33,7 @@ const Loader = () => {
 
   return (
     <div
-      className={`loader__wrapper ${isLoading ? "active" : ""} ${
-        isFadeOut ? "fade-out" : ""
+      className={`loader__wrapper ${isLoading ? "active" : ""}
       }`}
     >
       <div className="loader"></div>

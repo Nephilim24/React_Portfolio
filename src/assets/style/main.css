@@ -46,6 +46,10 @@ textarea {
   outline: none;
 }
 
+button {
+  background: transparent;
+}
+
 img {
   user-select: none;
   pointer-events: none;

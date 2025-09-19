@@ -5,11 +5,10 @@
   justify-content: space-between;
   padding: 20px;
   transition: all 0.3s linear;
-  position: relative;
 
   & .burger__menu {
     display: none;
-    overflow: hidden;
+    background: transparent;
   }
 
   .logo {

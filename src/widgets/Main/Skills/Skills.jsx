@@ -19,8 +19,8 @@ const skillsItems = [
 
 const Skills = () => {
   return (
-    <section className="skill">
-      <div className="skill__content container">
+    <section className="skills" id="skills">
+      <div className="skills__content container">
         <Title>
           Мой <span>стек</span>
         </Title>
@@ -28,10 +28,10 @@ const Skills = () => {
           Как фронтенд-разработчик веб-приложений, я освоил следующие навыки и
           инструменты, которые использую в процессе работы.
         </Descr>
-        <div className="skill__technologies">
+        <div className="skills__technologies">
           {skillsItems.map((item, index) => (
-            <div key={index} className="skill__img-box">
-              <img className="skill__img" src={item.path} alt={item.name} />
+            <div key={index} className="skills__img-box">
+              <img className="skills__img" src={item.path} alt={item.name} />
             </div>
           ))}
         </div>

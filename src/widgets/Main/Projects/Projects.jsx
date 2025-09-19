@@ -5,7 +5,7 @@ import SwiperCarousel from "../SwiperCarousel/SwiperCarousel.jsx";
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="projects__content container">
         <Title>
           Мои <span>проекты</span>

@@ -5,7 +5,7 @@ import NavBarLogo from "./NavBarLogo/NavBarLogo.jsx";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
@@ -22,29 +22,32 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className={isScrolled ? "scrolled" : ""}>
-      <nav className="nav container">
-        <a className="logo" href="#">
-          <NavBarLogo />
-          <span>Nephilim</span>
-        </a>
-        <NavBarLinks isMenuToggled={isMenuToggled} />
-        <a
-          href="#"
-          className={
-            isAnimated ? "burger__menu opening" : "burger__menu closing"
-          }
-          onClick={() => {
-            setIsAnimated(!isAnimated);
-            setIsMenuToggled(!isMenuToggled);
-          }}
-        >
-          <span className="burger__menu-line"></span>
-          <span className="burger__menu-line"></span>
-          <span className="burger__menu-line"></span>
-        </a>
-      </nav>
-    </header>
+    <>
+      <header className={isScrolled ? "scrolled" : ""}>
+        <nav className="nav container">
+          <a className="logo" href="#">
+            <NavBarLogo />
+            <span>Nephilim</span>
+          </a>
+          {/* Десктопный список */}
+          <NavBarLinks desktop />
+          <button
+            className={
+              isAnimated ? "burger__menu opening" : "burger__menu closing"
+            }
+            onClick={() => {
+              setIsAnimated(!isAnimated);
+              setIsMenuOpen(!isMenuOpen);
+            }}
+          >
+            <span className="burger__menu-line"></span>
+            <span className="burger__menu-line"></span>
+            <span className="burger__menu-line"></span>
+          </button>
+        </nav>
+      </header>
+      <NavBarLinks isMenuOpen={isMenuOpen} mobile />
+    </>
   );
 };
 

@@ -1,18 +1,15 @@
 header {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
+  backdrop-filter: blur(48px);
   width: 100vw;
   height: 85px;
   z-index: 1000;
   background: rgb(20, 24, 26, 0.8);
-  backdrop-filter: blur(48px);
   box-sizing: border-box;
-  overflow-x: hidden;
   transition: all 0.3s linear;
 
   &.scrolled {
-    backdrop-filter: blur(48px);
     box-shadow: 0 4px 4px 0 #00000026;
     transition: all 0.3s linear;
   }

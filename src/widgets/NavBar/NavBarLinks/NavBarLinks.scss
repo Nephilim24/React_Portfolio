@@ -4,6 +4,10 @@
   z-index: 100;
   gap: 30px;
 
+  &--mobile {
+    display: none;
+  }
+
   &-link {
     font-weight: 400;
     font-size: 18px;
@@ -18,24 +22,43 @@
   }
 }
 
+@media (max-width: 998px) {
+  .nav {
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     &__list {
-      position: absolute;
-      padding: 20px;
-      top: 100%;
-      right: 0;
-      flex-direction: column;
-      background: rgba(20, 24, 26, 0.8);
-      backdrop-filter: blur(48px);
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: all 0.3s linear;
+      &--desktop {
+        // Всегда скрывать на мобильных устройствах
+        display: none;
+      }
+      &--mobile {
+        display: flex;
+        position: fixed;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(20, 24, 26, 0.8);
+        backdrop-filter: blur(48px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 10000;
 
-      &.toggled {
-        transform: scaleY(1);
-        transition: all 0.3s 0.55s linear;
-        box-shadow: -6px 8px 4px 0 rgba(0, 0, 0, 0.1490196078);
+        &.opened {
+          opacity: 1;
+          transition: all 0.3s 0.55s linear;
+          box-shadow: -6px 8px 4px 0 rgba(0, 0, 0, 0.1490196078);
+          pointer-events: all;
+        }
       }
     }
   }

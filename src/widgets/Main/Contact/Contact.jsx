@@ -5,7 +5,7 @@ import Form from "../Form/Form";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contact__content container">
         <Title>
           <span>Связаться</span> со мной

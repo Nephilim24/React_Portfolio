@@ -9,7 +9,7 @@ import Descr from "../../Reuse/Descr/Descr.jsx";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__content container">
         <div className="about__visual">
           <div className="about__visual-images">
