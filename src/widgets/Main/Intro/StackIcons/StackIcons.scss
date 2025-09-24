@@ -2,7 +2,6 @@
   position: absolute;
   top: 65%;
   left: 5%;
-  filter: blur(2px);
   transform: rotate(12deg);
   z-index: 6;
 
@@ -40,8 +39,8 @@
 .figma__icon-box {
   position: absolute;
   transform: rotate(-26deg);
-  top: 23%;
-  left: -10%;
+  top: 30%;
+  left: -2%;
   z-index: 6;
 
   .figma__icon {
@@ -52,7 +51,7 @@
 .react__icon-box {
   position: absolute;
   transform: rotate(-13deg);
-  top: 3%;
+  top: -10%;
   left: 30%;
 
   .react__icon {
@@ -64,7 +63,7 @@
   transform: rotate(-25deg);
   top: 0;
   left: -12%;
-  z-index: 3;
+  z-index: 5;
 
   .sass__icon {
     animation: levitate 2s ease-in-out infinite alternate;
@@ -132,6 +131,39 @@
   .sass__icon-box {
     .sass__icon {
       width: 100%;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .html__icon-box {
+    .html__icon {
+      width: 90%;
+    }
+  }
+  .css__icon-box {
+    .css__icon {
+      width: 62px;
+    }
+  }
+  .js__icon-box {
+    .js__icon {
+      width: 90%;
+    }
+  }
+  .figma__icon-box {
+    .figma__icon {
+      width: 90%;
+    }
+  }
+  .react__icon-box {
+    .react__icon {
+      width: 90%;
+    }
+  }
+  .sass__icon-box {
+    left: -8%;
+    .sass__icon {
+      width: 90%;
     }
   }
 }

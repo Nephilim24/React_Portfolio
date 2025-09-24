@@ -1,13 +1,26 @@
 import "./Intro.scss";
-import myPhoto from "../../../assets/images/Me.png";
+import mainPortrait from "../../../assets/images/main-portrait.png";
 import introCircle from "../../../assets/icons/info-circle.svg";
 import introSmallCircle from "../../../assets/icons/info-small-circle.svg";
-import introRectangle from "../../../assets/icons/info-rectangle.png";
+// import introRectangle from "../../../assets/icons/info-rectangle.png";
 import SocialLinks from "./SocialLinks/SocialLinks.jsx";
 import StackIcons from "./StackIcons/StackIcons.jsx";
 import Button from "../../Reuse/Button/Button.jsx";
 
 const Intro = () => {
+  const link = () => {
+    // При клике создаётся переменная, которая находит элемент с id из массива объектов links с ключом id, а затем скролит до него
+    const anchor = document.getElementById("contact");
+    // scrollIntoView() скроллит до видимости определённого элемента. Например до секции с id about, то есть "Обо мне".
+    anchor.scrollIntoView({
+      // В фигурных скобах переданы параметры:
+      // behavior со значением "smooth" отвечает за плавную анимацию скролла
+      //  Параметр block отвечает за то, до откуда надо скроллить относительно блока. В данном случае center, то есть до центра блока.
+      behavior: "smooth",
+      block: "center",
+    });
+  };
+
   return (
     <section className="intro">
       <div className="intro__content container">
@@ -27,14 +40,18 @@ const Intro = () => {
             отзывчивый дизайн и захватывающую интерактивность.
           </p>
           <div className="intro__actions">
-            <Button text="Связаться со мной" />
+            <Button text="Связаться со мной" onClick={link}/>
             <SocialLinks />
           </div>
         </div>
 
         <div className="intro__visual">
           <div className="intro__portrait">
-            <img className="intro__portrait-img" src={myPhoto} alt="My Photo" />
+            <img
+              className="intro__portrait-img"
+              src={mainPortrait}
+              alt="My Photo"
+            />
             {/* <img
               className="intro__portrait-rectangle"
               src={introRectangle}

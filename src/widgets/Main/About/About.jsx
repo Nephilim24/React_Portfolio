@@ -1,5 +1,5 @@
 import "./About.scss";
-import myPhoto2 from "../../../assets/images/Me2.png";
+import secondPortrait from "../../../assets/images/second-portrait.png";
 import aboutCircle from "../../../assets/icons/about-circle.svg";
 import aboutSmallCircle from "../../../assets/icons/about-small-circle.svg";
 // import aboutRectangle from "../../../assets/icons/about-rectangle.png";
@@ -13,7 +13,7 @@ const About = () => {
       <div className="about__content container">
         <div className="about__visual">
           <div className="about__visual-images">
-            <img className="about__visual-portrait" src={myPhoto2} alt="" />
+            <img className="about__visual-portrait" src={secondPortrait} alt="" />
             {/* <img className="about__visual-rectangle" src={aboutRectangle} alt="" /> */}
             <img
               className="about__visual-rectangle-green"

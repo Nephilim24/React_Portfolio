@@ -25,10 +25,13 @@ const NavBar = () => {
     <>
       <header className={isScrolled ? "scrolled" : ""}>
         <nav className="nav container">
-          <a className="logo" href="#">
+          <button
+            className="logo"
+            onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
+          >
             <NavBarLogo />
             <span>Nephilim</span>
-          </a>
+          </button>
           {/* Десктопный список */}
           <NavBarLinks desktop />
           <button
