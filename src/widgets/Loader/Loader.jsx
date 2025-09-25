@@ -13,7 +13,7 @@ const Loader = () => {
       }, 1000);
     };
 
-    window.addEventListener("load", handleLoad);
+    window.addEventListener("DOMContentLoaded", handleLoad);
 
     // Блокируем скролл body, пока идет загрузка
     if (isLoading) {
