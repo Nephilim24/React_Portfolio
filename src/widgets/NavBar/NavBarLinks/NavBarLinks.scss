@@ -3,6 +3,7 @@
   align-items: center;
   z-index: 100;
   gap: 30px;
+  transition: all 0.3s;
 
   &--mobile {
     display: none;
@@ -42,7 +43,7 @@
         position: fixed;
         top: 85px;
         left: 0;
-        width: 100%;
+        width: 100vw;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -50,7 +51,7 @@
         backdrop-filter: blur(48px);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.3s;
+        transition: all 0.3s;
         z-index: 10000;
 
         &.opened {

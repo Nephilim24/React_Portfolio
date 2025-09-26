@@ -4,13 +4,14 @@ import { Navigation } from "swiper/modules";
 import "swiper/scss";
 import "./SwiperCarousel.scss";
 import Auto from "../../../assets/images/Auto.png";
-import OldPortfolio from "../../../assets/images/AboutMe.png";
 import BoulevardMarket from "../../../assets/images/BoulevardMarket.png";
+import Cinephile from "../../../assets/images/Cinephile.png";
 import Createx from "../../../assets/images/Createx.png";
 import GoTrip from "../../../assets/images/GoTrip.png";
 import Grayson from "../../../assets/images/Grayson.png";
 import Nike from "../../../assets/images/Nike.png";
 import NoteApp from "../../../assets/images/NoteApp.png";
+import OldPortfolio from "../../../assets/images/AboutMe.png";
 import SilverHouse from "../../../assets/images/SilverHouse.png";
 import TheNewsWeb from "../../../assets/images/TheNewsWeb.png";
 
@@ -23,6 +24,11 @@ const SwiperCarousel = () => {
       name: "Createx",
       img: Createx,
       link: "https://nephilim24.github.io/Createx/",
+    },
+    {
+      name: "Cinephile",
+      img: Cinephile,
+      link: "https://nephilim24.github.io/Cinephile/",
     },
     {
       name: "Grayson",
