@@ -1,6 +1,6 @@
-import Header from "./widgets/Header/Header.jsx";
-import Main from "./widgets/Main/Main.jsx";
-import Loader from "./widgets/Loader/Loader.jsx";
+import Header from "./components/Header/Header.jsx";
+import Main from "./components/Main/Main.jsx";
+import Loader from "./components/Loader/Loader.jsx";
 
 function App() {
   return (

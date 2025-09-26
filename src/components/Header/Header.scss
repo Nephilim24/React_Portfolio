@@ -1,0 +1,16 @@
+header {
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(48px);
+  width: 100vw;
+  height: 85px;
+  z-index: 1000;
+  background: var(--header-bg);
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+
+  &.scrolled {
+    box-shadow: 0 4px 4px 0 #00000026;
+    transition: all 0.3s linear;
+  }
+}

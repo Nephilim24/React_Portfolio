@@ -1,0 +1,66 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  gap: 30px;
+  transition: all 0.3s;
+
+  &--mobile {
+    display: none;
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
+    transition: all 0.5s ease-out;
+
+    &:hover {
+      text-shadow: 0 0 5px #3abf00, 0 0 10px #3abf00, 0 0 15px #3abf00,
+        0 0 20px #3abf00;
+      transition: all 0.5s ease-out;
+    }
+  }
+}
+
+@media (max-width: 998px) {
+  .nav {
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    &__list {
+      &--desktop {
+        // Всегда скрывать на мобильных устройствах
+        display: none;
+      }
+      &--mobile {
+        display: flex;
+        position: fixed;
+        top: 85px;
+        left: 0;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--header-bg);
+        backdrop-filter: blur(48px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        z-index: 10000;
+
+        &.opened {
+          opacity: 1;
+          transition: all 0.3s 0.55s linear;
+          box-shadow: -6px 8px 4px 0 rgba(0, 0, 0, 0.1490196078);
+          pointer-events: all;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.logo {
+  svg {
+    margin-right: 10px;
+    transition: all 0.5s ease-out;
+    path {
+      fill: var(--white);
+    }
+  }
+  &:hover svg {
+    filter: drop-shadow(0 0 1px var(--primary-color))
+      drop-shadow(0 0 2px var(--primary-color))
+      drop-shadow(0 0 3px var(--primary-color))
+      drop-shadow(0 0 4px var(--primary-color));
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    svg {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}

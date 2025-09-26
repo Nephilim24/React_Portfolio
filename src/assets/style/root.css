@@ -5,8 +5,8 @@
   --secondary-color: #a7fd82;
   --black: #14181a;
   --white: #fff;
-  /* --primary-color: #00a8cd; */
-  /* --secondary-color: #87e9fe; */
+  --header-bg: rgba(20, 24, 26, 0.8);
+  --circle-color: #d9d9d9;
 }
 
 /*

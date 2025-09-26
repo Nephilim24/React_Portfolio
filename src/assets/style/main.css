@@ -17,6 +17,50 @@ body {
   font-family: var(--font-family);
   background-color: var(--black);
   color: var(--white);
+  overflow-x: hidden;
+  transition: all 0.3s linear;
+}
+
+.light-theme {
+  --header-bg: rgba(2247, 250, 247, 0.8);
+  --black: rgb(247, 250, 247);
+  --white: #14181a;
+  --circle-color: #000;
+}
+
+body.light-theme .intro__visual-circle stop:last-child,
+body.light-theme .intro__visual-small-circle stop:last-child,
+body.light-theme .about__visual-circle stop:last-child,
+body.light-theme .about__visual-small-circle stop:last-child {
+  stop-opacity: 0.1;
+}
+
+body.light-theme .swiper-slide {
+  box-shadow: 0 0 10px 0 rgb(180, 190, 200, 0.5),
+    0 1.5px 6px 0 rgba(180, 190, 200, 0.1);
+}
+
+body.light-theme .swiper-slide:hover {
+  box-shadow: 0 0 15px 0 rgba(180, 190, 200, 0.58),
+    0 1.5px 6px 0 rgba(180, 190, 200, 0.42);
+}
+
+body.light-theme .skills__technologies {
+  background: linear-gradient(135deg, #f7faf7 0%, #e3e8ea 40%, #e0f5d8 100%);
+}
+
+body.light-theme .skills__img-box {
+  background: linear-gradient(
+    218deg,
+    rgba(0, 168, 205, 1) 0%,
+    rgba(0, 168, 205, 0) 82.85%
+  );
+}
+
+body.light-theme #myForm {
+  background: linear-gradient(135deg, #f7faf7 0%, #e3e8ea 40%, #e0f5d8 100%);
+  box-shadow: 0 2px 12px 0 rgba(20, 24, 26, 0.04);
+  border: 1px solid var(--primary-color);
 }
 
 a {
