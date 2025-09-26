@@ -85,13 +85,6 @@
       box-shadow: 0 4px 4px 0 #0000004d;
       z-index: 5;
     }
-    // &-rectangle {
-    //   position: absolute;
-    //   width: 100%;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: 4;
-    // }
   }
 }
 
@@ -115,7 +108,6 @@
         font-size: 20px;
       }
       & p {
-        // max-width: 400px;
         font-size: 14px;
       }
     }
@@ -124,11 +116,6 @@
     &__portrait-img {
       width: 250px;
     }
-
-    // // .intro__rectangle
-    // &__rectangle {
-    //   width: 250px;
-    // }
 
     // .intro__portrait-circle
     &__portrait-circle {

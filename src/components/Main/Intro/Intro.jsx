@@ -2,7 +2,6 @@ import "./Intro.scss";
 import mainPortrait from "../../../assets/images/main-portrait.png";
 import introCircle from "../../../assets/icons/info-circle.svg";
 import introSmallCircle from "../../../assets/icons/info-small-circle.svg";
-// import introRectangle from "../../../assets/icons/info-rectangle.png";
 import SocialLinks from "./SocialLinks/SocialLinks.jsx";
 import StackIcons from "./StackIcons/StackIcons.jsx";
 import Button from "../../Reuse/Button/Button.jsx";
