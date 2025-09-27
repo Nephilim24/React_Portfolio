@@ -1,7 +1,5 @@
 import "./Intro.scss";
-import mainPortrait from "../../../assets/images/main-portrait.png";
-import introCircle from "../../../assets/icons/info-circle.svg";
-import introSmallCircle from "../../../assets/icons/info-small-circle.svg";
+import mainPortrait from "../../../assets/images/main-portrait.webp";
 import SocialLinks from "./SocialLinks/SocialLinks.jsx";
 import StackIcons from "./StackIcons/StackIcons.jsx";
 import Button from "../../Reuse/Button/Button.jsx";
@@ -52,10 +50,9 @@ const Intro = () => {
               alt="My Photo"
             />
           </div>
-          {/* <img className="intro__visual-circle" src={introCircle} alt="" /> */}
           <svg
             className="intro__visual-circle"
-            width="344"
+            dth="344"
             height="345"
             viewBox="0 0 344 345"
             fill="none"
@@ -85,11 +82,6 @@ const Intro = () => {
               </linearGradient>
             </defs>
           </svg>
-          {/* <img
-            className="intro__visual-small-circle"
-            src={introSmallCircle}
-            alt=""
-          /> */}
           <svg
             className="intro__visual-small-circle"
             width="274"

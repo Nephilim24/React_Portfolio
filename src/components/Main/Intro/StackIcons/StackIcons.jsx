@@ -1,9 +1,9 @@
-import html from "../../../../assets/images/html.png";
-import css from "../../../../assets/images/css.png";
-import js from "../../../../assets/images/js.png";
-import figma from "../../../../assets/images/figma.png";
-import react from "../../../../assets/images/react.png";
-import sass from "../../../../assets/images/sass.png";
+import html from "../../../../assets/images/html.webp";
+import css from "../../../../assets/images/css.webp";
+import js from "../../../../assets/images/js.webp";
+import figma from "../../../../assets/images/figma.webp";
+import react from "../../../../assets/images/react.webp";
+import sass from "../../../../assets/images/sass.webp";
 import "./StackIcons.scss";
 
 const StackIcons = () => {
@@ -18,7 +18,7 @@ const StackIcons = () => {
   return (
     <>
       {stackItems.map((item, index) => (
-        <div className={`${item.name}__icon-box`} key={index} style={{willChange: 'transform'}}>
+        <div className={`${item.name}__icon-box`} key={index}>
           <img
             className={`${item.name}__icon`}
             src={item.path}

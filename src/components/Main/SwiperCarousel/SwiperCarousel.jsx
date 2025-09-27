@@ -3,17 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/scss";
 import "./SwiperCarousel.scss";
-import Auto from "../../../assets/images/Auto.png";
-import BoulevardMarket from "../../../assets/images/BoulevardMarket.png";
-import Cinephile from "../../../assets/images/Cinephile.png";
-import Createx from "../../../assets/images/Createx.png";
-import GoTrip from "../../../assets/images/GoTrip.png";
-import Grayson from "../../../assets/images/Grayson.png";
-import Nike from "../../../assets/images/Nike.png";
-import NoteApp from "../../../assets/images/NoteApp.png";
-import OldPortfolio from "../../../assets/images/AboutMe.png";
-import SilverHouse from "../../../assets/images/SilverHouse.png";
-import TheNewsWeb from "../../../assets/images/TheNewsWeb.png";
+import Auto from "../../../assets/images/Auto.webp";
+import BoulevardMarket from "../../../assets/images/BoulevardMarket.webp";
+import Cinephile from "../../../assets/images/Cinephile.webp";
+import Createx from "../../../assets/images/Createx.webp";
+import GoTrip from "../../../assets/images/GoTrip.webp";
+import Grayson from "../../../assets/images/Grayson.webp";
+import Nike from "../../../assets/images/Nike.webp";
+import NoteApp from "../../../assets/images/NoteApp.webp";
+import OldPortfolio from "../../../assets/images/AboutMe.webp";
+import SilverHouse from "../../../assets/images/SilverHouse.webp";
+import TheNewsWeb from "../../../assets/images/TheNewsWeb.webp";
 
 const SwiperCarousel = () => {
   const [swiper, setSwiper] = useState(null);
@@ -86,7 +86,7 @@ const SwiperCarousel = () => {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <a href={project.link} target="_blank">
-              <img src={project.img} alt={project.name} />
+              <img src={project.img} alt={project.name} loading="lazy"/>
               <p>
                 <svg
                   width="20"

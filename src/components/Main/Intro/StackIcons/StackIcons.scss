@@ -4,10 +4,6 @@
   left: 5%;
   transform: rotate(12deg);
   z-index: 6;
-
-  .html__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
-  }
 }
 
 .css__icon-box {
@@ -16,10 +12,6 @@
   left: 85%;
   transform: rotate(-35deg);
   z-index: 3;
-
-  .css__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
-  }
 }
 
 .js__icon-box {
@@ -28,10 +20,6 @@
   top: 1.6%;
   left: 70%;
   z-index: 5;
-
-  .js__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
-  }
 }
 
 .figma__icon-box {
@@ -40,10 +28,6 @@
   top: 30%;
   left: -2%;
   z-index: 6;
-
-  .figma__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
-  }
 }
 
 .react__icon-box {
@@ -51,10 +35,6 @@
   transform: rotate(-13deg);
   top: -10%;
   left: 30%;
-
-  .react__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
-  }
 }
 .sass__icon-box {
   position: absolute;
@@ -62,9 +42,32 @@
   top: 0;
   left: -12%;
   z-index: 5;
+}
+.html__icon,
+.css__icon,
+.js__icon,
+.figma__icon,
+.react__icon,
+.sass__icon {
+  will-change: transform;
+  animation: levitate 3s ease-in-out infinite alternate;
+}
 
-  .sass__icon {
-    animation: levitate 2s ease-in-out infinite alternate;
+.low-perf .html__icon,
+.low-perf .css__icon,
+.low-perf .js__icon,
+.low-perf .figma__icon,
+.low-perf .react__icon,
+.low-perf .sass__icon {
+  animation: none !important;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
   }
 }
 

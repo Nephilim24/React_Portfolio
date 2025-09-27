@@ -1,8 +1,5 @@
 import "./About.scss";
-import secondPortrait from "../../../assets/images/second-portrait.png";
-import aboutCircle from "../../../assets/icons/about-circle.svg";
-import aboutSmallCircle from "../../../assets/icons/about-small-circle.svg";
-// import aboutRectangle from "../../../assets/icons/about-rectangle.png";
+import secondPortrait from "../../../assets/images/second-portrait.webp";
 import aboutRectangleGreen from "../../../assets/icons/about-rectangle-green.png";
 import Title from "../../Reuse/Title/Title";
 import Descr from "../../Reuse/Descr/Descr.jsx";

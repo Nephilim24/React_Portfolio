@@ -1,12 +1,12 @@
 import "./Skills.scss";
 import Title from "../../Reuse/Title/Title.jsx";
 import Descr from "../../Reuse/Descr/Descr.jsx";
-import html from "../../../assets/images/html.png";
-import css from "../../../assets/images/css.png";
-import js from "../../../assets/images/js.png";
-import figma from "../../../assets/images/figma.png";
-import react from "../../../assets/images/react.png";
-import sass from "../../../assets/images/sass.png";
+import html from "../../../assets/images/html.webp";
+import css from "../../../assets/images/css.webp";
+import js from "../../../assets/images/js.webp";
+import figma from "../../../assets/images/figma.webp";
+import react from "../../../assets/images/react.webp";
+import sass from "../../../assets/images/sass.webp";
 
 const skillsItems = [
   { name: "html", path: html },
