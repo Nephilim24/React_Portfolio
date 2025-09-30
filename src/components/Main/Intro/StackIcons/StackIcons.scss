@@ -53,21 +53,33 @@
   animation: levitate 3s ease-in-out infinite alternate;
 }
 
-.low-perf .html__icon,
-.low-perf .css__icon,
-.low-perf .js__icon,
-.low-perf .figma__icon,
-.low-perf .react__icon,
-.low-perf .sass__icon {
-  animation: none !important;
-}
-
 @keyframes levitate {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(15px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .html__icon,
+  .css__icon,
+  .js__icon,
+  .figma__icon,
+  .react__icon,
+  .sass__icon {
+    animation: none;
+  }
+}
+@media (max-width: 600px) {
+  .html__icon,
+  .css__icon,
+  .js__icon,
+  .figma__icon,
+  .react__icon,
+  .sass__icon {
+    animation: none;
   }
 }
 

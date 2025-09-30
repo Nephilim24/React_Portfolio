@@ -86,7 +86,7 @@ const SwiperCarousel = () => {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <a href={project.link} target="_blank">
-              <img src={project.img} alt={project.name} loading="lazy"/>
+              <img src={project.img} alt={project.name} />
               <p>
                 <svg
                   width="20"
