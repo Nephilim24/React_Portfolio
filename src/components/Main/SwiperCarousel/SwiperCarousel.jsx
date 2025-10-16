@@ -9,6 +9,7 @@ import Cinephile from "../../../assets/images/Cinephile.webp";
 import Createx from "../../../assets/images/Createx.webp";
 import GoTrip from "../../../assets/images/GoTrip.webp";
 import Grayson from "../../../assets/images/Grayson.webp";
+import Hackaton from "../../../assets/images/Hackaton.webp";
 import Nike from "../../../assets/images/Nike.webp";
 import NoteApp from "../../../assets/images/NoteApp.webp";
 import OldPortfolio from "../../../assets/images/AboutMe.webp";
@@ -19,52 +20,57 @@ const SwiperCarousel = () => {
   const [swiper, setSwiper] = useState(null);
 
   const projects = [
-    { name: "Auto", img: Auto, link: "https://nephilim24.github.io/Auto/" },
+    { name: "Auto", img: Auto, link: "https://github.com/Nephilim24/Auto" },
     {
       name: "Createx",
       img: Createx,
-      link: "https://nephilim24.github.io/Createx/",
+      link: "https://github.com/Nephilim24/Createx",
     },
     {
       name: "Cinephile",
       img: Cinephile,
-      link: "https://nephilim24.github.io/Cinephile/",
+      link: "https://github.com/Nephilim24/Cinephile",
     },
     {
       name: "Grayson",
       img: Grayson,
-      link: "https://nephilim24.github.io/Grayson/",
+      link: "https://github.com/Nephilim24/Grayson",
+    },
+    {
+      name: "Hackaton",
+      img: Hackaton,
+      link: "https://github.com/Nephilim24/hackaton",
     },
     {
       name: "Note App",
       img: NoteApp,
-      link: "https://note-app-nu-tan.vercel.app/",
+      link: "https://github.com/Nephilim24/Note-App",
     },
     {
       name: "Old Portfolio",
       img: OldPortfolio,
-      link: "https://nephilim24.github.io/about_me",
+      link: "https://github.com/Nephilim24/about_me",
     },
     {
       name: "Boulevard Market",
       img: BoulevardMarket,
-      link: "https://nephilim24.github.io/Boulevard_Market/",
+      link: "https://github.com/Nephilim24/Boulevard_Market",
     },
     {
       name: "Go Trip",
       img: GoTrip,
-      link: "https://nephilim24.github.io/GoTrip/",
+      link: "https://github.com/Nephilim24/GoTrip",
     },
-    { name: "Nike", img: Nike, link: "https://nephilim24.github.io/Nike/" },
+    { name: "Nike", img: Nike, link: "https://github.com/Nephilim24/Nike" },
     {
       name: "Silver House",
       img: SilverHouse,
-      link: "https://nephilim24.github.io/Silver_House/",
+      link: "https://github.com/Nephilim24/Silver_House",
     },
     {
       name: "The News Web",
       img: TheNewsWeb,
-      link: "https://nephilim24.github.io/TheNewsWeb/",
+      link: "https://github.com/Nephilim24/TheNewsWeb",
     },
   ];
 
