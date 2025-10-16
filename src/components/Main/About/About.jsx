@@ -19,7 +19,7 @@ const About = () => {
             <img
               className="about__visual-rectangle-green"
               src={aboutRectangleGreen}
-              alt=""
+              alt="" loading="lazy"
             />
           </div>
           {/* <img className="about__visual-circle" src={aboutCircle} alt="" /> */}

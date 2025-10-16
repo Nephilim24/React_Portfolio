@@ -31,7 +31,7 @@ const Skills = () => {
         <div className="skills__technologies">
           {skillsItems.map((item, index) => (
             <div key={index} className="skills__img-box">
-              <img className="skills__img" src={item.path} alt={item.name} />
+              <img className="skills__img" src={item.path} alt={item.name} loading="lazy"/>
             </div>
           ))}
         </div>
