@@ -4,9 +4,21 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Form = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const { 
+    register, 
+    handleSubmit, 
+    reset,
+    formState: { errors },
+    watch
+  } = useForm({
+    mode: 'onBlur' // Проверка при потере фокуса
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' или 'error'
+
+  // Следим за значениями email и phone
+  const emailValue = watch('email');
+  const phoneValue = watch('phone');
 
   // Функция отправки данных
   const onSubmit = async (data) => {
@@ -15,7 +27,7 @@ const Form = () => {
 
     try {
       // Отправляем POST запрос на нашу serverless функцию
-      const response = await fetch('/api/send-telegram.js', {
+      const response = await fetch('/api/send-telegram', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,37 +56,97 @@ const Form = () => {
   return (
     <>
       <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
-        <input
-          {...register("name", { required: true })}
-          type="text"
-          placeholder="Имя"
-          disabled={isLoading}
-        />
-        <input
-          {...register("surname", { required: true })}
-          type="text"
-          placeholder="Фамилия"
-          disabled={isLoading}
-        />
-        <input
-          {...register("email")}
-          type="email"
-          placeholder="Электронная почта"
-          disabled={isLoading}
-        />
-        <input
-          {...register("phone")}
-          type="tel"
-          inputMode="numeric"
-          pattern="[0-9]*"
-          placeholder="Телефон"
-          disabled={isLoading}
-        />
-        <textarea 
-          {...register("message")} 
-          placeholder="Сообщение"
-          disabled={isLoading}
-        ></textarea>
+        <div>
+          <input
+            {...register("name", { 
+              required: "Имя обязательно для заполнения",
+              minLength: {
+                value: 2,
+                message: "Имя должно содержать минимум 2 символа"
+              }
+            })}
+            type="text"
+            placeholder="Имя"
+            disabled={isLoading}
+          />
+          {errors.name && (
+            <span style={{ color: 'red', fontSize: '12px' }}>
+              {errors.name.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <input
+            {...register("surname", { 
+              required: "Фамилия обязательна для заполнения",
+              minLength: {
+                value: 2,
+                message: "Фамилия должна содержать минимум 2 символа"
+              }
+            })}
+            type="text"
+            placeholder="Фамилия"
+            disabled={isLoading}
+          />
+          {errors.surname && (
+            <span style={{ color: 'red', fontSize: '12px' }}>
+              {errors.surname.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <input
+            {...register("email", {
+              required: !emailValue ? "Укажите email или телефон" : false,
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Некорректный email адрес"
+              }
+            })}
+            type="email"
+            placeholder="Электронная почта"
+            disabled={isLoading}
+          />
+          {errors.email && (
+            <span style={{ color: 'red', fontSize: '12px' }}>
+              {errors.email.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <input
+            {...register("phone", {
+              required: !phoneValue ? "Укажите email или телефон" : false,
+              pattern: {
+                value: /^[\d\s\+\-\(\)]+$/,
+                message: "Некорректный номер телефона"
+              },
+              minLength: {
+                value: 9,
+                message: "Номер должен содержать минимум 9 цифр"
+              }
+            })}
+            type="tel"
+            placeholder="Телефон (например: +998 90 123 45 67)"
+            disabled={isLoading}
+          />
+          {errors.phone && (
+            <span style={{ color: 'red', fontSize: '12px' }}>
+              {errors.phone.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <textarea 
+            {...register("message")} 
+            placeholder="Сообщение"
+            disabled={isLoading}
+          ></textarea>
+        </div>
 
         {/* Сообщения о статусе отправки */}
         {submitStatus === 'success' && (
