@@ -4,21 +4,21 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Form = () => {
-  const { 
-    register, 
-    handleSubmit, 
+  const {
+    register,
+    handleSubmit,
     reset,
     formState: { errors },
-    watch
+    watch,
   } = useForm({
-    mode: 'onBlur' // Проверка при потере фокуса
+    mode: "onBlur", // Проверка при потере фокуса
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success' или 'error'
 
   // Следим за значениями email и phone
-  const emailValue = watch('email');
-  const phoneValue = watch('phone');
+  const emailValue = watch("email");
+  const phoneValue = watch("phone");
 
   // Функция отправки данных
   const onSubmit = async (data) => {
@@ -27,10 +27,10 @@ const Form = () => {
 
     try {
       // Отправляем POST запрос на нашу serverless функцию
-      const response = await fetch('/api/send-telegram', {
-        method: 'POST',
+      const response = await fetch("/api/send-telegram", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
@@ -38,16 +38,16 @@ const Form = () => {
       const result = await response.json();
 
       if (result.success) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         reset(); // Очищаем форму после успешной отправки
-        console.log('Сообщение успешно отправлено!');
+        console.log("Сообщение успешно отправлено!");
       } else {
-        setSubmitStatus('error');
-        console.error('Ошибка:', result.error);
+        setSubmitStatus("error");
+        console.error("Ошибка:", result.error);
       }
     } catch (error) {
-      setSubmitStatus('error');
-      console.error('Ошибка отправки:', error);
+      setSubmitStatus("error");
+      console.error("Ошибка отправки:", error);
     } finally {
       setIsLoading(false);
     }
@@ -56,122 +56,112 @@ const Form = () => {
   return (
     <>
       <form id="myForm" onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <input
-            {...register("name", { 
-              required: "Имя обязательно для заполнения",
-              minLength: {
-                value: 2,
-                message: "Имя должно содержать минимум 2 символа"
-              }
-            })}
-            type="text"
-            placeholder="Имя"
-            disabled={isLoading}
-          />
-          {errors.name && (
-            <span style={{ color: 'red', fontSize: '12px' }}>
-              {errors.name.message}
-            </span>
-          )}
-        </div>
+        <input
+          {...register("name", {
+            required: "Имя обязательно для заполнения",
+            minLength: {
+              value: 2,
+              message: "Имя должно содержать минимум 2 символа",
+            },
+          })}
+          type="text"
+          placeholder="Имя"
+          disabled={isLoading}
+        />
+        {errors.name && (
+          <span style={{ color: "red", fontSize: "12px" }}>
+            {errors.name.message}
+          </span>
+        )}
 
-        <div>
-          <input
-            {...register("surname", { 
-              required: "Фамилия обязательна для заполнения",
-              minLength: {
-                value: 2,
-                message: "Фамилия должна содержать минимум 2 символа"
-              }
-            })}
-            type="text"
-            placeholder="Фамилия"
-            disabled={isLoading}
-          />
-          {errors.surname && (
-            <span style={{ color: 'red', fontSize: '12px' }}>
-              {errors.surname.message}
-            </span>
-          )}
-        </div>
+        <input
+          {...register("surname", {
+            required: "Фамилия обязательна для заполнения",
+            minLength: {
+              value: 2,
+              message: "Фамилия должна содержать минимум 2 символа",
+            },
+          })}
+          type="text"
+          placeholder="Фамилия"
+          disabled={isLoading}
+        />
+        {errors.surname && (
+          <span style={{ color: "red", fontSize: "12px" }}>
+            {errors.surname.message}
+          </span>
+        )}
 
-        <div>
-          <input
-            {...register("email", {
-              required: !emailValue ? "Укажите email или телефон" : false,
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Некорректный email адрес"
-              }
-            })}
-            type="email"
-            placeholder="Электронная почта"
-            disabled={isLoading}
-          />
-          {errors.email && (
-            <span style={{ color: 'red', fontSize: '12px' }}>
-              {errors.email.message}
-            </span>
-          )}
-        </div>
+        <input
+          {...register("email", {
+            required: !emailValue ? "Укажите email или телефон" : false,
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: "Некорректный email адрес",
+            },
+          })}
+          type="email"
+          placeholder="Электронная почта"
+          disabled={isLoading}
+        />
+        {errors.email && (
+          <span style={{ color: "red", fontSize: "12px" }}>
+            {errors.email.message}
+          </span>
+        )}
 
-        <div>
-          <input
-            {...register("phone", {
-              required: !phoneValue ? "Укажите email или телефон" : false,
-              pattern: {
-                value: /^[\d\s\+\-\(\)]+$/,
-                message: "Некорректный номер телефона"
-              },
-              minLength: {
-                value: 9,
-                message: "Номер должен содержать минимум 9 цифр"
-              }
-            })}
-            type="tel"
-            placeholder="Телефон (например: +998 90 123 45 67)"
-            disabled={isLoading}
-          />
-          {errors.phone && (
-            <span style={{ color: 'red', fontSize: '12px' }}>
-              {errors.phone.message}
-            </span>
-          )}
-        </div>
+        <input
+          {...register("phone", {
+            required: !phoneValue ? "Укажите email или телефон" : false,
+            pattern: {
+              value: /^[\d\s\+\-\(\)]+$/,
+              message: "Некорректный номер телефона",
+            },
+            minLength: {
+              value: 9,
+              message: "Номер должен содержать минимум 9 цифр",
+            },
+          })}
+          type="tel"
+          placeholder="Телефон (например: +998 90 123 45 67)"
+          disabled={isLoading}
+        />
+        {errors.phone && (
+          <span style={{ color: "red", fontSize: "12px" }}>
+            {errors.phone.message}
+          </span>
+        )}
 
-        <div>
-          <textarea 
-            {...register("message")} 
-            placeholder="Сообщение"
-            disabled={isLoading}
-          ></textarea>
-        </div>
+        <textarea
+          {...register("message")}
+          placeholder="Сообщение"
+          disabled={isLoading}
+        ></textarea>
 
         {/* Сообщения о статусе отправки */}
-        {submitStatus === 'success' && (
-          <div style={{ color: 'green', marginTop: '10px' }}>
+        {submitStatus === "success" && (
+          <div style={{ color: "green", marginTop: "10px" }}>
             ✅ Сообщение успешно отправлено!
           </div>
         )}
-        {submitStatus === 'error' && (
-          <div style={{ color: 'red', marginTop: '10px' }}>
+        {submitStatus === "error" && (
+          <div style={{ color: "red", marginTop: "10px" }}>
             ❌ Ошибка отправки. Попробуйте ещё раз.
           </div>
         )}
       </form>
-      
+
       <div className="form__actions">
-        <Button 
-          text={"Сбросить"} 
-          type={"reset"} 
-          form={"myForm"} 
+        <Button
+          text={"Сбросить"}
+          type={"reset"}
+          form={"myForm"}
           disabled={isLoading}
         />
-        <Button 
-          text={isLoading ? "Отправка..." : "Отправить"} 
-          type={"submit"} 
-          form={"myForm"} 
+        <Button
+          text={isLoading ? "Отправка..." : "Отправить"}
+          type={"submit"}
+          form={"myForm"}
           disabled={isLoading}
         />
       </div>
