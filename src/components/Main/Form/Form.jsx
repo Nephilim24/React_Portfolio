@@ -94,10 +94,19 @@ const Form = () => {
 
         <input
           {...register("email", {
-            required: !emailValue ? "Укажите email или телефон" : false,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Некорректный email адрес",
+            validate: (value) => {
+              // Если оба поля пустые - ошибка
+              if (!value && !phoneValue) {
+                return "Укажите email или телефон";
+              }
+              // Если email заполнен - проверяем формат
+              if (
+                value &&
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+              ) {
+                return "Некорректный email адрес";
+              }
+              return true; // Всё ок
             },
           })}
           type="email"
@@ -112,18 +121,25 @@ const Form = () => {
 
         <input
           {...register("phone", {
-            required: !phoneValue ? "Укажите email или телефон" : false,
-            pattern: {
-              value: /^[\d\s\+\-\(\)]+$/,
-              message: "Некорректный номер телефона",
-            },
-            minLength: {
-              value: 9,
-              message: "Номер должен содержать минимум 9 цифр",
+            validate: (value) => {
+              // Если оба поля пустые - ошибка
+              if (!value && !emailValue) {
+                return "Укажите email или телефон";
+              }
+              // Если телефон заполнен - проверяем формат
+              if (value) {
+                if (!/^[\d\s\+\-\(\)]+$/.test(value)) {
+                  return "Некорректный номер телефона";
+                }
+                if (value.replace(/\D/g, "").length < 10) {
+                  return "Номер должен содержать минимум 10 цифр";
+                }
+              }
+              return true; // Всё ок
             },
           })}
           type="tel"
-          placeholder="Телефон (например: +998 90 123 45 67)"
+          placeholder="Телефон (например: +7 999 123-45-67)"
           disabled={isLoading}
         />
         {errors.phone && (
